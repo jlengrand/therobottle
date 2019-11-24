@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package nl.lengrand.therobottle.greet;
+package nl.lengrand.therobottle.app.greet;
 
 import java.util.concurrent.atomic.AtomicReference;
 

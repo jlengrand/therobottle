@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2018 Oracle and/or its affiliates. All rights reserved.
+ * Copyright (c) 2019 Oracle and/or its affiliates. All rights reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,26 +13,27 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-package nl.lengrand.therobottle.greet;
-
-import java.util.Set;
+package nl.lengrand.therobottle.app;
 
 import javax.enterprise.context.ApplicationScoped;
-import javax.ws.rs.ApplicationPath;
-import javax.ws.rs.core.Application;
+import javax.inject.Inject;
 
-import io.helidon.common.CollectionsHelper;
+import io.helidon.microprofile.server.RoutingPath;
+import io.helidon.security.SecurityContext;
+import io.helidon.webserver.Routing;
+import io.helidon.webserver.Service;
 
 /**
- * Simple Application that produces a greeting message.
+ * TODO javadoc.
  */
 @ApplicationScoped
-@ApplicationPath("/")
-public class GreetApplication extends Application {
+@RoutingPath("/reactive")
+public class ReactiveService implements Service {
+    @Inject
+    private SecurityContext securityContext;
 
     @Override
-    public Set<Class<?>> getClasses() {
-        return CollectionsHelper.setOf(GreetResource.class);
+    public void update(Routing.Rules rules) {
+        rules.get("/", (req, res) -> res.send("Context: " + securityContext));
     }
 }

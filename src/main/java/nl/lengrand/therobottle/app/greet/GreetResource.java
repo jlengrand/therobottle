@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nl.lengrand.therobottle.greet;
+package nl.lengrand.therobottle.app.greet;
 
 import java.util.Collections;
 

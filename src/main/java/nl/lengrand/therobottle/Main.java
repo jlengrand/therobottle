@@ -22,14 +22,7 @@ import java.util.logging.LogManager;
 
 import io.helidon.microprofile.server.Server;
 
-/**
- * The application main class.
- */
 public final class Main {
-
-    /**
-     * Cannot be instantiated.
-     */
     private Main() { }
 
     /**
@@ -38,13 +31,10 @@ public final class Main {
      * @throws IOException if there are problems reading logging properties
      */
     public static void main(final String[] args) throws IOException {
-        // load logging configuration
         setupLogging();
-
-        // start the server
         Server server = startServer();
 
-        System.out.println("http://localhost:" + server.port() + "/greet");
+        System.out.println("http://localhost:" + server.port() + "/sensor");
     }
 
     /**
