@@ -1,13 +1,17 @@
 package nl.lengrand.therobottle.app.sensor;
 
+import nl.lengrand.therobottle.driver.Dht11Driver;
+
 import javax.enterprise.context.ApplicationScoped;
-import javax.ws.rs.ApplicationPath;
 
 @ApplicationScoped
 public class SensorProvider {
 
+    private Dht11Driver theDriver = new Dht11Driver();
+
     public float[] retrieveSensorData(){
-        float[] sensorData = {25, 27};
+        float [] sensorData = theDriver.getTemperatureAndHumidity();
+
         return sensorData;
     }
 }

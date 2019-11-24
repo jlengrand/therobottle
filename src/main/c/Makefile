@@ -6,7 +6,7 @@ OUT = libdht11
 
 default: all
 
-all: clean compileJava library
+all: clean compileJava library copy
 
 program: Dht11Driver.c
 	gcc -Wall $(INCLUDES) $(HEADERS) $(FILES) -o $(OUT)
@@ -14,8 +14,8 @@ program: Dht11Driver.c
 library: Dht11Driver.c
 	gcc -shared -fPIC -o $(OUT).so $(INCLUDES) $(FILES)
 
-move:
-	-cp $(OUT).so
+copy:
+	-cp $(OUT).so ../resources/native/
 
 compileJava:
 	-cd ../java/nl/lengrand/therobottle/driver;javac -h . Dht11Driver.java;cd -;
