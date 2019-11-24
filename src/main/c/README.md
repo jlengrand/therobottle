@@ -1,0 +1,1 @@
+The code contained in the adafruit folder comes from https://github.com/adafruit/Adafruit_Python_DHT and will be used as driver
