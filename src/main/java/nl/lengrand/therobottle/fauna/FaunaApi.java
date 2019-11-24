@@ -6,7 +6,7 @@ import com.faunadb.client.types.Value;
 import java.util.concurrent.ExecutionException;
 
 import static com.faunadb.client.query.Language.*;
-import static fauna.Connection.*;
+import static nl.lengrand.therobottle.fauna.Connection.*;
 
 public class FaunaApi {
 

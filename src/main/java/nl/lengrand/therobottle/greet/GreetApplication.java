@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package nl.lengrand.therobottle;
+package nl.lengrand.therobottle.greet;
 
 import java.util.Set;
 

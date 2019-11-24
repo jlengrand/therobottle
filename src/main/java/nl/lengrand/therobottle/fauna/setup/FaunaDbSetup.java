@@ -1,14 +1,15 @@
 package nl.lengrand.therobottle.fauna.setup;
 
 import com.faunadb.client.FaunaClient;
+import com.faunadb.client.query.Language;
 import com.faunadb.client.types.Value;
-import fauna.Connection;
-import fauna.ConnectionException;
+import nl.lengrand.therobottle.fauna.Connection;
+import nl.lengrand.therobottle.fauna.ConnectionException;
 
 import java.util.concurrent.ExecutionException;
 
 import static com.faunadb.client.query.Language.*;
-import static fauna.Connection.*;
+import static nl.lengrand.therobottle.fauna.Connection.*;
 
 /*
     Used to create the database and indexes. Should be run only once!
